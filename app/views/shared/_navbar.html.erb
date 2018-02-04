@@ -1,10 +1,12 @@
-<% if user_signed_in? %>
-	<div>Hello, <%= current_user.email %></div>
+<header class="bg-white">
+	<div class="alignright">
+		<% if user_signed_in? %>
+			<div>Hello, <%= current_user.email %></div>
 
-	<div><%= link_to('Log out', destroy_user_session_path, method: :delete) %></div>
+			<div><%= link_to('Log out', destroy_user_session_path, method: :delete) %></div>
 
-<% else %>
-	Logged out
-	<%= link_to('Log in', new_user_session_path) %>
+		<% else %>
+			<%= link_to('Log in', new_user_session_path) %>
 
-<% end %>
+		<% end %>
+</header>

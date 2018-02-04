@@ -1,7 +1,18 @@
-Showing participant with id <%= @participant.unique_id %>
 
-<ul>
-	<% @results.each do |r| %>
-	<li>Microalbumin: <%= r.microalbumin %></li>
-	<% end %>
-</ul>
+<section>
+  <div class="wrap">
+    <h3>Results for <%=@participant.unique_id %></h3>
+    <p><%= link_to "Back To Dashboard", dashboard_path %></p>
+    <ul class="work">
+		<% @results.each do |r| %>
+			<li>
+		    	<a href="#" rel="external">
+					<p>Microalbumin: <%= r.microalbumin %></p>
+				</a>
+			</li>
+		<% end %>
+    </ul>
+  </div>
+  <!-- .end .wrap -->
+</section>
+

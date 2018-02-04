@@ -1,7 +1,14 @@
-Index of Participants
+<center></center>
 
-<ul>
-	<% @participants.each do |p| %>
-	<li><a href=/participants/<%= p.unique_id %>><%= p.unique_id %></a></li>
-	<% end %>
-</ul>
+<section>
+  	<div class="wrap">
+		<h3>All Participants</h3>
+		<ul class="work">
+			<% @participants.each do |p| %>
+				<li>
+					<a href=/participants/<%= p.unique_id %> rel="external"><%= p.unique_id %></a>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+</section>
