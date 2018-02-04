@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
   get "/dashboard" => "static#dashboard"
 
-  resources :participants
+  resources :participants, param: :unique_id
 end

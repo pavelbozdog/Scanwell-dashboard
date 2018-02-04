@@ -5,8 +5,8 @@ class ParticipantsController < ApplicationController
 	end
 
 	def show
-		@participant = Participant.find(params[:id])
-		@results = Result.where participant_id: params[:id]
+		@participant = Participant.find_by unique_id: params[:unique_id]
+		@results = @participant.results
 	end
 
 end

@@ -4,7 +4,7 @@ Dashboard view
 <table>
 	<% @participants.each do |p| %>
 		<tr>
-			<td><a href=/participants/<%= p.id %>><%= p.unique_id %></a></td>
+			<td><a href=/participants/<%= p.unique_id %>><%= p.unique_id %></a></td>
 		</tr>
 	<% end %>
 
