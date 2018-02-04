@@ -1,0 +1,11 @@
+Dashboard view
+<%= link_to('Go to index', root_path) %>
+
+<table>
+	<% @participants.each do |p| %>
+		<tr>
+			<td><a href=/participants/<%= p.id %>><%= p.unique_id %></a></td>
+		</tr>
+	<% end %>
+
+</table>

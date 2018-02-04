@@ -1,0 +1,7 @@
+Showing participant with id <%= @participant.unique_id %>
+
+<ul>
+	<% @results.each do |r| %>
+	<li>Microalbumin: <%= r.microalbumin %></li>
+	<% end %>
+</ul>
